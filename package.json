@@ -5,7 +5,7 @@
   "license": "All Rights Reserved",
   "private": true,
   "scripts": {
-    "start:dev": "webpack serve --mode=development",
+    "start:dev": "concurrently \"webpack serve --mode=development\" \"cd server && nodemon index\"",
     "start:test": "jest . --watchAll"
   },
   "browserslist": [
@@ -27,6 +27,7 @@
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^12.1.0",
     "axios": "^0.24.0",
+    "concurrently": "^6.4.0",
     "i18next": "^20.4.0",
     "i18next-browser-languagedetector": "^6.1.2",
     "react": ">=16.8.0",
