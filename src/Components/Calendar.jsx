@@ -1,34 +1,42 @@
 import React, { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
 
-// import { useTranslation } from 'react-i18next';
+import { useSelector, useDispatch } from 'react-redux';
 import {
   Typography,
-  Button,
   Card,
   CardActions,
   CardContent,
   CssBaseline,
   Grid,
   Container,
+  Divider,
 } from '@mui/material';
+// import { useTranslation } from 'react-i18next';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import ActionModal from './ActionModal';
 import { getSlots } from '../slice';
-
-// const slots = [
-//   1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27,
-//   28, 29, 30, 31,
-// ];
 
 const theme = createTheme();
 
 const Calendar = () => {
   const dispatch = useDispatch();
   const { slots } = useSelector((state) => state.slots);
+  let today = new Date().toLocaleString().split(',')[0];
 
   useEffect(() => {
     dispatch(getSlots());
-  }, []);
+  }, [dispatch]);
+
+  const message = (date, status) => {
+    if ((today >= date && status === 'closed') || status === 'open') {
+      return 'You have a gift!';
+    } else if (today >= date && status === 'empty') {
+      return 'Empty';
+    }
+    if (today < date) {
+      return 'Happy Holidays!';
+    }
+  };
 
   return (
     <ThemeProvider theme={theme}>
@@ -36,22 +44,22 @@ const Calendar = () => {
       <main>
         <Container sx={{ py: 8 }} maxWidth="sm">
           <Grid container spacing={4}>
-            {slots &&
-              slots.map((slot) => (
-                <Grid item key={slot} xs={12} sm={8} md={2}>
-                  <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
-                    <CardContent sx={{ flexGrow: 1 }}>
-                      <Typography gutterBottom variant="h5" component="h2">
-                        {slot.day}
-                      </Typography>
-                      <Typography>Some text</Typography>
-                    </CardContent>
-                    <CardActions>
-                      <Button size="small">Open</Button>
-                    </CardActions>
-                  </Card>
-                </Grid>
-              ))}
+            {slots.map((slot) => (
+              <Grid item key={slot.day} xs={12} sm={6} md={4} justifyContent="center">
+                <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
+                  <CardContent sx={{ flexGrow: 1 }}>
+                    <Typography textAlign="center" gutterBottom variant="h3" component="h2">
+                      {slot.day}
+                    </Typography>
+                    <Divider />
+                    <Typography textAlign="center">{message(slot.date, slot.status)}</Typography>
+                  </CardContent>
+                  <CardActions>
+                    <ActionModal date={slot.date} day={slot.day} status={slot.status} />
+                  </CardActions>
+                </Card>
+              </Grid>
+            ))}
           </Grid>
         </Container>
       </main>

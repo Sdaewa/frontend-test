@@ -1,56 +1,23 @@
-// import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import axios from 'axios';
-
-// export const initialState = {
-//   slots: [],
-//   status: null,
-// };
-
-// export const getCalData = createAsyncThunk('chocolates', async () => {
-//   const response = await axios.get('http://localhost:5001/chocolates');
-//   const slotData = await response.json();
-//   return { slotData };
-// });
-
-// const slice = createSlice({
-//   name: 'auth',
-//   initialState,
-//   reducers: {
-//     reset: () => initialState,
-//     open: (state) => {
-//       state.isOpen = true;
-//     },
-//     thereIsChoc: (state) => {
-//       state.thereIsChoc = false;
-//     },
-//     isReserved: (state) => {
-//       state.isReserved = true;
-//     },
-//   },
-//   extraReducers: {
-//     [getCalData.pending]: (state) => {
-//       state.status = 'loading';
-//     },
-//     [getCalData.fulfilled]: (state, action) => {
-//       state.status = 'success';
-//       state.slots = action.payload;
-//     },
-//     [getCalData.rejected]: (state) => {
-//       state.status = 'error';
-//     },
-//   },
-// });
-
-// const selectors = {};
-// const actions = { ...slice.actions };
-
-// export { actions, selectors };
-// export default slice;
-
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+
+import axios from 'axios';
 
 export const getSlots = createAsyncThunk('chocolates/getSlots', async () => {
   const response = await axios.get('http://localhost:5001/chocolates').then((res) => res.data);
+  return response;
+});
+
+export const openSlot = createAsyncThunk('/open/chocolate/open/slot', async (payload) => {
+  const response = await axios
+    .post('http://localhost:5001/open/chocolate', payload)
+    .then((res) => res.data);
+  return response;
+});
+
+export const eatChoc = createAsyncThunk('/eat/chocolate/eatChoc', async (payload) => {
+  const response = await axios
+    .post('http://localhost:5001/eat/chocolate', payload)
+    .then((res) => res.data);
   return response;
 });
 
@@ -63,15 +30,6 @@ const slotsSlice = createSlice({
   initialState,
   reducers: {
     reset: () => initialState,
-    // open: (state) => {
-    //   state.isOpen = true;
-    // },
-    // thereIsChoc: (state) => {
-    //   state.thereIsChoc = false;
-    // },
-    // isReserved: (state) => {
-    //   state.isReserved = true;
-    // },
   },
   extraReducers: {
     [getSlots.pending]: (state) => {
@@ -82,6 +40,26 @@ const slotsSlice = createSlice({
       state.slots = action.payload;
     },
     [getSlots.rejected]: (state) => {
+      state.status = 'error';
+    },
+    [openSlot.pending]: (state) => {
+      state.status = 'loading';
+    },
+    [openSlot.fulfilled]: (state) => {
+      state.status = 'success';
+      // state.slots = action.payload;
+    },
+    [openSlot.rejected]: (state) => {
+      state.status = 'error';
+    },
+    [eatChoc.pending]: (state) => {
+      state.status = 'loading';
+    },
+    [eatChoc.fulfilled]: (state) => {
+      state.status = 'success';
+      // state.slots = action.payload;
+    },
+    [eatChoc.rejected]: (state) => {
       state.status = 'error';
     },
   },

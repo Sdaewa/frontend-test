@@ -12,13 +12,6 @@ const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <AppBar position="relative">
-        <Toolbar>
-          <Typography variant="h6" color="inherit" noWrap>
-            Calendar
-          </Typography>
-        </Toolbar>
-      </AppBar>
       <main>
         <Calendar />
       </main>

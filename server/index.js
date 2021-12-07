@@ -15,6 +15,7 @@ app.get('/chocolates', (_, res) => {
     const json = JSON.parse(buffer);
     res.json(json);
   } catch (e) {
+    console.log(e);
     res.status(500).send('something went wrong');
   }
 });

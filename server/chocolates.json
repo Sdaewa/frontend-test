@@ -1,219 +1,157 @@
 [
     {
         "day": 1,
-        "thereIsChoc": true,
-        "isOpen": false,
-        "isReserved": false,
-        "isValid": false
+        "date": "01/12/2021",
+        "status": "closed"
     },
     {
         "day": 2,
-        "thereIsChoc": true,
-        "isOpen": false,
-        "isReserved": false,
-        "isValid": false
+        "date": "02/12/2021",
+        "status": "closed"
     },
     {
         "day": 3,
-        "thereIsChoc": true,
-        "isOpen": false,
-        "isReserved": false,
-        "isValid": false
+        "date": "03/12/2021",
+        "status": "closed"
     },
     {
         "day": 4,
-        "thereIsChoc": true,
-        "isOpen": false,
-        "isReserved": false,
-        "isValid": false
+        "date": "04/12/2021",
+        "status": "closed"
     },
     {
         "day": 5,
-        "thereIsChoc": true,
-        "isOpen": false,
-        "isReserved": false,
-        "isValid": false
+        "date": "05/12/2021",
+        "status": "closed"
     },
     {
         "day": 6,
-        "thereIsChoc": true,
-        "isOpen": false,
-        "isReserved": false,
-        "isValid": false
+        "date": "06/12/2021",
+        "status": "closed"
     },
     {
         "day": 7,
-        "thereIsChoc": true,
-        "isOpen": false,
-        "isReserved": false,
-        "isValid": false
+        "date": "07/12/2021",
+        "status": "closed"
     },
     {
         "day": 8,
-        "thereIsChoc": true,
-        "isOpen": false,
-        "isReserved": false,
-        "isValid": false
+        "date": "08/12/2021",
+        "status": "closed"
     },
     {
         "day": 9,
-        "thereIsChoc": true,
-        "isOpen": false,
-        "isReserved": false,
-        "isValid": false
+        "date": "09/12/2021",
+        "status": "closed"
     },
     {
         "day": 10,
-        "thereIsChoc": true,
-        "isOpen": false,
-        "isReserved": false,
-        "isValid": false
+        "date": "10/12/2021",
+        "status": "closed"
     },
     {
         "day": 11,
-        "thereIsChoc": true,
-        "isOpen": false,
-        "isReserved": false,
-        "isValid": false
+        "date": "11/12/2021",
+        "status": "closed"
     },
     {
         "day": 12,
-        "thereIsChoc": true,
-        "isOpen": false,
-        "isReserved": false,
-        "isValid": false
+        "date": "12/12/2021",
+        "status": "closed"
     },
     {
         "day": 13,
-        "thereIsChoc": true,
-        "isOpen": false,
-        "isReserved": false,
-        "isValid": false
+        "date": "13/12/2021",
+        "status": "closed"
     },
     {
         "day": 14,
-        "thereIsChoc": true,
-        "isOpen": false,
-        "isReserved": false,
-        "isValid": false
+        "date": "14/12/2021",
+        "status": "closed"
     },
     {
         "day": 15,
-        "thereIsChoc": true,
-        "isOpen": false,
-        "isReserved": false,
-        "isValid": false
+        "date": "15/12/2021",
+        "status": "closed"
     },
     {
         "day": 16,
-        "thereIsChoc": true,
-        "isOpen": false,
-        "isReserved": false,
-        "isValid": false
+        "date": "16/12/2021",
+        "status": "closed"
     },
     {
         "day": 17,
-        "thereIsChoc": true,
-        "isOpen": false,
-        "isReserved": false,
-        "isValid": false
+        "date": "17/12/2021",
+        "status": "closed"
     },
     {
         "day": 18,
-        "thereIsChoc": true,
-        "isOpen": false,
-        "isReserved": false,
-        "isValid": false
+        "date": "18/12/2021",
+        "status": "closed"
     },
     {
         "day": 19,
-        "thereIsChoc": true,
-        "isOpen": false,
-        "isReserved": false,
-        "isValid": false
+        "date": "19/12/2021",
+        "status": "closed"
     },
     {
         "day": 20,
-        "thereIsChoc": true,
-        "isOpen": false,
-        "isReserved": false,
-        "isValid": false
+        "date": "20/12/2021",
+        "status": "closed"
     },
     {
         "day": 21,
-        "thereIsChoc": true,
-        "isOpen": false,
-        "isReserved": false,
-        "isValid": false
+        "date": "21/12/2021",
+        "status": "closed"
     },
     {
         "day": 22,
-        "thereIsChoc": true,
-        "isOpen": false,
-        "isReserved": false,
-        "isValid": false
+        "date": "22/12/2021",
+        "status": "closed"
     },
     {
         "day": 23,
-        "thereIsChoc": true,
-        "isOpen": false,
-        "isReserved": false,
-        "isValid": false
+        "date": "23/12/2021",
+        "status": "closed"
     },
     {
         "day": 24,
-        "thereIsChoc": true,
-        "isOpen": false,
-        "isReserved": false,
-        "isValid": false
+        "date": "24/12/2021",
+        "status": "closed"
     },
     {
         "day": 25,
-        "thereIsChoc": true,
-        "isOpen": false,
-        "isReserved": false,
-        "isValid": false
+        "date": "25/12/2021",
+        "status": "closed"
     },
     {
         "day": 26,
-        "thereIsChoc": true,
-        "isOpen": false,
-        "isReserved": false,
-        "isValid": false
+        "date": "26/12/2021",
+        "status": "closed"
     },
     {
         "day": 27,
-        "thereIsChoc": true,
-        "isOpen": false,
-        "isReserved": false,
-        "isValid": false
+        "date": "27/12/2021",
+        "status": "closed"
     },
     {
         "day": 28,
-        "thereIsChoc": true,
-        "isOpen": false,
-        "isReserved": false,
-        "isValid": false
+        "date": "28/12/2021",
+        "status": "closed"
     },
     {
         "day": 29,
-        "thereIsChoc": true,
-        "isOpen": false,
-        "isReserved": false,
-        "isValid": false
+        "date": "29/12/2021",
+        "status": "closed"
     },
     {
         "day": 30,
-        "thereIsChoc": true,
-        "isOpen": false,
-        "isReserved": false,
-        "isValid": false
+        "date": "30/12/2021",
+        "status": "closed"
     },
     {
         "day": 31,
-        "thereIsChoc": true,
-        "isOpen": false,
-        "isReserved": false,
-        "isValid": false
+        "date": "31/12/2021",
+        "status": "closed"
     }
 ]
