@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
+import { useTranslation } from 'react-i18next';
 import { Box, Button, Typography, Modal } from '@mui/material';
 import { openSlot } from '../slice';
 import { eatChoc } from '../slice';
@@ -17,6 +18,7 @@ const style = {
 };
 
 const actionModal = (props) => {
+  const { t } = useTranslation();
   const dispatch = useDispatch();
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
@@ -64,13 +66,16 @@ const actionModal = (props) => {
   return (
     <div>
       {status === 'open' ? (
-        <Button onClick={onEat}>Eat</Button>
+        <Button data-testid="button" onClick={onEat}>
+          {t('eat')}
+        </Button>
       ) : (
-        <Button disabled={itsTime(props.date)} onClick={onOpen}>
-          Open
+        <Button data-testid="button" disabled={itsTime(props.date)} onClick={onOpen}>
+          {t('open')}
         </Button>
       )}
       <Modal
+        data-testid="modal"
         open={open}
         onClose={handleClose}
         aria-labelledby="modal-modal-title"
@@ -78,10 +83,14 @@ const actionModal = (props) => {
       >
         <Box sx={style}>
           <Typography id="modal-modal-title" variant="h6" component="h2">
-            You have 1 chocolate, what would you like to do?
+            {t('You have 1 chocolate, what would you like to do?')}
           </Typography>
-          <Button onClick={onEat}>Eat</Button>
-          <Button onClick={handleSave}>Save</Button>
+          <Button data-testid="button" onClick={onEat}>
+            Eat
+          </Button>
+          <Button data-testid="button" onClick={handleSave}>
+            Save
+          </Button>
         </Box>
       </Modal>
     </div>

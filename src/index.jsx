@@ -9,12 +9,12 @@ import theme from './theme';
 import App from './App';
 
 ReactDOM.render(
-  <Provider store={store}>
-    <ThemeProvider theme={theme}>
+  <ThemeProvider theme={theme}>
+    <Provider store={store}>
       <CssBaseline />
       <App />
-    </ThemeProvider>
-  </Provider>,
+    </Provider>
+  </ThemeProvider>,
   document.getElementById('root')
 );
 
